@@ -46,7 +46,7 @@ body{
   width: 30%;
 }
 .bannerSection{
-  background-image: url(./assets/img/pexels-david-bartus-963278.jpg);
+  background-image: url(./assets/img/pexels-david-bartus-963278.png);
   background-size: cover;
   background-position:initial;
   /* background-color: #222222; */
@@ -54,7 +54,7 @@ body{
 }
 
 .skills{
-  background-image: url(./assets/img/pexels-david-bartus-963278.jpg);
+  background-image: url(./assets/img/pexels-david-bartus-963278.png);
   background-position: center;
   background-size: cover;
   
