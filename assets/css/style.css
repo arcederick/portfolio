@@ -14,32 +14,109 @@
   --scroll-end: calc(-100% - var(--gap));
 }
 
+
+
+/* Estilos gerais */
+/* Estilos gerais (Dark Mode padrão) */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+.header{
+  position: fixed;
+  background-color: #457db944;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+.header a{
+  color: white;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  margin: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h5, p {
+  color: #e0e0e0;
+}
+
+.btn-primary {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.btn-secondary {
+  background-color: #424242;
+  color: #ffffff;
+  border-color: #424242;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.light-mode .card {
+  background-color: #ffffff;
+  border-color: #ddd;
+}
+
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h5, 
+body.light-mode p {
+  color: #212529;
+}
+
+body.light-mode .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+body.light-mode .btn-secondary {
+  background-color: #f8f9fa;
+  color: #212529;
+  border-color: #ddd;
+}
+
+/* Botão de Toggle */
+#toggle-dark-mode {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
 *{
     padding: 0; margin: 0;
     box-sizing: border-box;
 }
-body{
+/* body{
   background: var(--Black);
   font-family: "Ubuntu", sans-serif;
-  overflow-x: hidden;
-}
+  
+} */
 
-.header{
-  background-color: var(--Black);
-}
 
-.navbar ul li a{
-  color: rgb(228, 226, 226);
-}
-
-.navbar div a {
-  color: rgb(228, 226, 226);
-}
 
 .banner h1{
   text-align: center;
-    /* padding-top: 20%; */
-    /* padding-left: 20%; */
+  padding-top: 20px;
   font-weight: 800;
   font-size: 3.8rem;
   color: white;
@@ -57,7 +134,7 @@ body{
   background-size:cover;
   background-position:center;
   /* background-color: #222222; */
-  height:95vh;
+  height:100vh;
 }
 
 .skills{
@@ -231,7 +308,8 @@ body{
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #e7e8e9;
+  color: #185fa7;
+  transition: background-color 0.3s, color 0.3s;
 }
   
 .resume .resume-item {
@@ -247,7 +325,6 @@ body{
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
   margin-bottom: 10px;
 }
   
@@ -266,12 +343,8 @@ body{
   
 .resume .resume-item ul li {
   padding-bottom: 10px;
-  color: white;
-}
-.resume-item p{
-  color: white;
-}
   
+} 
 .resume .resume-item:last-child {
   padding-bottom: 0;
 }
@@ -427,12 +500,8 @@ body{
 }
 
 /* blog */
-.blog-section {
-  background-color: var(--Black);
-}
-.session-title{
-  color: white;
-}
+
+
 
 .card-img-top {
   height: 200px; /* Define uma altura fixa para as imagens */
@@ -448,11 +517,12 @@ body{
 .card-title {
   font-size: 1.2rem;
   font-weight: bold;
+  color: white;
 }
 
 .card-text {
   font-size: 1rem;
-  color: #6c757d;
+  
 }
 
 .card .btn-primary {
