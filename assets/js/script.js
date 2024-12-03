@@ -1,13 +1,22 @@
-const themeToggle = document.getElementById("theme-toggle");
+const textArray = [ "Olá Mundo!", "Hello World!", "Ciao Mondo!", "Bonjour le Monde!", "Kon'nichiwa Sekai!", "Hola Mondo!"];
+let currentIndex = 0;
+const typewriterElement = document.getElementById("typewriter");
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-});
+function typewriterEffect() {
+  const text = textArray[currentIndex];
+  let index = 0;
+  typewriterElement.textContent = "";
 
-// Alterna entre as variáveis de tema no modo escuro
-document.body.classList.toggle("dark-mode", localStorage.getItem("dark-mode") === "enabled");
+  const interval = setInterval(() => {
+    if (index < text.length) {
+      typewriterElement.textContent += text[index];
+      index++;
+    } else {
+      clearInterval(interval);
+      currentIndex = (currentIndex + 1) % textArray.length;
+      setTimeout(typewriterEffect, 1000); // Tempo de pausa antes de repetir
+    }
+  }, 100); // Velocidade do typewriter
+}
 
-themeToggle.addEventListener("click", () => {
-  const isDarkMode = document.body.classList.toggle("dark-mode");
-  localStorage.setItem("dark-mode", isDarkMode ? "enabled" : "disabled");
-});
+typewriterEffect();

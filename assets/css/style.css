@@ -13,10 +13,12 @@
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
 }
+*{
+  padding: 0; margin: 0;
+  box-sizing: border-box;
+}
 
 
-
-/* Estilos gerais */
 /* Estilos gerais (Dark Mode padrão) */
 body {
   background-color: #121212;
@@ -99,21 +101,6 @@ body.light-mode .btn-secondary {
 
 
 
-
-
-
-*{
-    padding: 0; margin: 0;
-    box-sizing: border-box;
-}
-/* body{
-  background: var(--Black);
-  font-family: "Ubuntu", sans-serif;
-  
-} */
-
-
-
 .banner h1{
   text-align: center;
   padding-top: 20px;
@@ -136,6 +123,35 @@ body.light-mode .btn-secondary {
   /* background-color: #222222; */
   height:100vh;
 }
+
+.typewriter-container {
+  position: absolute; /* Para poder usar o posicionamento top */
+  top: 10%; /* Alinha a div a 10% do topo da página */
+  left: 50%; /* Para centralizar horizontalmente */
+  transform: translateX(-50%); /* Ajusta o alinhamento para garantir que fique centralizado */
+  width: 100%; /* A largura pode ser 100% ou ajustada conforme necessário */
+  height: auto; /* Ajusta automaticamente a altura conforme o conteúdo */
+  overflow: hidden; /* Impede que o texto transborde para fora da área definida */
+  display: flex;
+  align-items: center; /* Alinha o texto verticalmente no centro da div */
+  justify-content: center; /* Centraliza o texto horizontalmente */
+}
+
+#typewriter {
+  font-size: 3rem; /* Define a fonte como 3rem */
+  display: inline-block;
+  white-space: nowrap; /* Garante que o texto não quebre em várias linhas */
+  border-right: 0.1em solid rgb(255, 255, 255); /* Cria o efeito de cursor */
+  padding-right: 0.1em; /* Espaço à direita do texto para o cursor aparecer com espaço */
+  animation: blink-caret 0.75s step-end infinite; /* Cria o efeito de piscar do cursor */
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent; /* Faz o cursor desaparecer no meio da animação */
+  }
+}
+
 
 .skills{
   background-image: url(../img/bg1.jpg);
