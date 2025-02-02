@@ -1,4 +1,4 @@
-const textArray = [ "Olá Mundo!", "Hello World!", "Ciao Mondo!", "Bonjour le Monde!", "Kon'nichiwa Sekai!", "Hola Mondo!"];
+const textArray = [ "Olá Mundo!", "Hello World!", "Ciao Mondo!", "Bonjour le Monde!", "Hola Mondo!"];
 let currentIndex = 0;
 const typewriterElement = document.getElementById("typewriter");
 
